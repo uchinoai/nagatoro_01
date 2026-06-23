@@ -29,57 +29,44 @@
             margin-top: 30px;
             margin-bottom: 15px;
         }
-        .meta-info {
+        .info-card {
             background-color: #fff;
             border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 4px;
+            padding: 20px;
+            border-radius: 6px;
             margin-bottom: 20px;
-            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
-        .meta-info ul {
+        .info-card ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        .meta-info li {
-            margin-bottom: 5px;
+        .info-card li {
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 10px;
+            font-size: 15px;
         }
-        .meta-info li:last-child {
+        .info-card li:last-child {
             margin-bottom: 0;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-            background-color: #fff;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-            font-size: 14px;
-        }
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-        tr:nth-child(even) {
-            background-color: #fafafa;
+            border-bottom: none;
+            padding-bottom: 0;
         }
         .weather-overview {
             background-color: #fff;
             border: 1px solid #ddd;
-            padding: 15px 20px;
-            border-radius: 4px;
+            padding: 20px;
+            border-radius: 6px;
             white-space: pre-wrap;
-            font-size: 14px;
+            font-size: 15px;
             line-height: 1.8;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
         .note {
             font-size: 12px;
             color: #666;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         a {
             color: #0056b3;
@@ -94,7 +81,7 @@
 
     <h1>【最新気象・観光情報データソース】</h1>
     
-    <div class="meta-info">
+    <div class="info-card">
         <ul>
             <li><strong>・データ取得日時：</strong> 2026/6/23 11:16:05</li>
             <li><strong>・対象地域：</strong> 埼玉県秩父郡長瀞町（秩父地方）</li>
@@ -102,27 +89,12 @@
     </div>
 
     <h2>■ ライン下り運航状況（リアルタイム自動取得）</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>運営会社</th>
-                <th>本日の運航・営業状況</th>
-                <th>情報元URL</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>秩父鉄道 長瀞ラインくだり</strong></td>
-                <td>本日、通常通りラインくだりの運航をいたします。</td>
-                <td><a href="https://www.chichibu-railway.co.jp/nagatoro/boat.html" target="_blank" rel="noopener noreferrer">公式ページ</a></td>
-            </tr>
-            <tr>
-                <td><strong>荒川ライン下り</strong></td>
-                <td>6/22(月)～6/24(weekData)まで 荒川ライン下りは運休です。</td>
-                <td><a href="https://www.arakawa-line.co.jp/" target="_blank" rel="noopener noreferrer">公式ページ</a></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="info-card">
+        <ul>
+            <li><strong>【運営会社】</strong> 秩父鉄道 長瀞ラインくだり <br> <strong>【本日の運航・営業状況】</strong> 本日、通常通りラインくだりの運航をいたします。 <br> <strong>【情報元URL】</strong> <a href="https://www.chichibu-railway.co.jp/nagatoro/boat.html" target="_blank" rel="noopener noreferrer">公式ページ</a></li>
+            <li><strong>【運営会社】</strong> 荒川ライン下り <br> <strong>【本日の運航・営業状況】</strong> 6/22(月)～6/24(水)まで 荒川ライン下りは運休です。 <br> <strong>【情報元URL】</strong> <a href="https://www.arakawa-line.co.jp/" target="_blank" rel="noopener noreferrer">公式ページ</a></li>
+        </ul>
+    </div>
 
     <h2>■ 埼玉県（秩父地方含む）の天気概況</h2>
     <div class="weather-overview">関東甲信地方は、高気圧に緩やかに覆われていますが、湿った空気の影響を受けています。
@@ -135,40 +107,14 @@
 
     <h2>■ 秩父地方（長瀞町周辺）の今日・明日・明後日の天気予報</h2>
     <p class="note">※気象庁の公式発表データをリアルタイム反映しています。<br>※すでに過ぎ去った時間帯の降水確率は「--」と表示されます。</p>
-    <table>
-        <thead>
-            <tr>
-                <th>日付</th>
-                <th>天気概要</th>
-                <th>6時～12時</th>
-                <th>12時～18時</th>
-                <th>18時～24時</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>6月23日（火）</strong></td>
-                <td>晴れ 昼過ぎ から くもり 所により 雨 で 雷を伴う</td>
-                <td>--</td>
-                <td>20%</td>
-                <td>30%</td>
-            </tr>
-            <tr>
-                <td><strong>6月24日（水）</strong></td>
-                <td>くもり 所により 夜 雨</td>
-                <td>10%</td>
-                <td>20%</td>
-                <td>20%</td>
-            </tr>
-            <tr>
-                <td><strong>6月25日（木）</strong></td>
-                <td>くもり 時々 雨</td>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-            </tr>
-        </tbody>
-    </table>
+    
+    <div class="info-card">
+        <ul>
+            <li><strong>【日付】</strong> 6月23日（火） <br> <strong>【天気概要】</strong> 晴れ 昼過ぎ から くもり 所により 雨 で 雷を伴う <br> <strong>【降水確率】</strong> 6時～12時: -- / 12時～18時: 20% / 18時～24時: 30%</li>
+            <li><strong>【日付】</strong> 6月24日（水） <br> <strong>【天気概要】</strong> くもり 所により 夜 雨 <br> <strong>【降水確率】</strong> 6時～12時: 10% / 12時～18時: 20% / 18時～24時: 20%</li>
+            <li><strong>【日付】</strong> 6月25日（木） <br> <strong>【天気概要】</strong> くもり 時々 雨 <br> <strong>【降水確率】</strong> 6時～12時: -- / 12時～18時: -- / 18時～24時: --</li>
+        </ul>
+    </div>
 
 </body>
 </html>
